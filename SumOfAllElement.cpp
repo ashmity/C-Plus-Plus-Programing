@@ -1,24 +1,18 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int a;
-    cout<<"enter number of rows of matrix:";
-    cin>>a;
-    int b;
-    cout<<"enter number of column of matrix:";
-    cin>>b;
-    int arr[a][b];
-    cout<<"enter elements of matrix:";
-    for(int i=0;i<a;i++){
-        for(int j=0;j<b;j++){
-            cin>>arr[i][j];
-        }
+    int n;
+    cout<<"enter size of array:";
+    cin>>n;
+    int arr[n];
+    cout<<"enter elements of an array:"<<endl;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
     }
-    int product=1;
-     for(int i=0;i<a;i++){
-        for(int j=0;j<b;j++){
-            product*=arr[i][j];
-        }
+    int sum=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
     }
-    cout<<"product of all elements is "<<product;
+    cout<<"sum is "<<sum;
+
 }
